@@ -9,7 +9,7 @@ spec:
   releaseName: linkerd
   chart:
     git: git@github.com:dstrebel/cluster-config
-    path: workloads/charts/linkerd
+    path: workloads/charts/linkerd2
     ref: master
   values:
     # url of existing prometheus
