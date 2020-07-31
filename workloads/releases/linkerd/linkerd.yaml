@@ -1,0 +1,29 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: linkerd
+  namespace: linkerd
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: linkerd
+  chart:
+    git: git@github.com:dstrebel/cluster-config
+    path: workloads/charts/linkerd
+    ref: master
+  values:
+    # url of existing prometheus
+    prometheusUrl: "prometheus-k8s.monitoring.svc.cluster.local"
+  # url of external grafana instance.
+    grafanaUrl: "grafana.monitoring.svc.cluster.local"
+    smiMetrics:
+      enabled: "true"
+
+    grafana:
+      enabled: false
+
+    prometheus:
+      enabled: false
+
+    tracing:
+      enabled: true
