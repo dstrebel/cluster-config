@@ -8,22 +8,16 @@ metadata:
 spec:
   releaseName: linkerd
   chart:
-    git: git@github.com:dstrebel/cluster-config
+    git: https://github.com/dstrebel/cluster-config
     path: workloads/charts/linkerd2
     ref: master
   values:
+    global:
     # url of existing prometheus
-    prometheusUrl: "prometheus-k8s.monitoring.svc.cluster.local"
+      prometheusUrl: "prometheus-k8s.monitoring.svc.cluster.local"
   # url of external grafana instance.
-    grafanaUrl: "grafana.monitoring.svc.cluster.local"
+      grafanaUrl: "grafana.monitoring.svc.cluster.local"
     smiMetrics:
       enabled: "true"
-
-    grafana:
-      enabled: false
-
-    prometheus:
-      enabled: false
-
     tracing:
       enabled: true
