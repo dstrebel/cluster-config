@@ -9,7 +9,7 @@ spec:
   releaseName: linkerd
   chart:
     git: https://github.com/dstrebel/cluster-config
-    path: workloads/charts/linkerd2
+    path: workloads/linkerd2
     ref: master
   # values:
   #  global:
