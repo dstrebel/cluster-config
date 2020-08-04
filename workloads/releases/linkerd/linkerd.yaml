@@ -8,8 +8,8 @@ metadata:
 spec:
   releaseName: linkerd
   chart:
-    git: https://github.com/dstrebel
-    path: cluster-config/workloads/linkerd2
+    git: https://github.com/dstrebel/cluster-config
+    path: workloads/linkerd2
     ref: master
   # values:
   #  global:
