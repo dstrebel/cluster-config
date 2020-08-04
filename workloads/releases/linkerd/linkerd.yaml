@@ -17,4 +17,4 @@ spec:
   #    prometheusUrl: "prometheus-k8s.monitoring.svc.cluster.local"
   # url of external grafana instance.
   #    grafanaUrl: "grafana.monitoring.svc.cluster.local"
-  ####    enabled: true
+  ###    enabled: true
